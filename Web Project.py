@@ -114,7 +114,7 @@ elif halaman == "👥 Anggota Tim":
                         justify-content: center; font-size: 3rem; color: #667eea;'>
                 👨‍💻
             </div>
-            <h3>Budi Santoso</h3>
+            <h3>Rasyid Irvan Maulana</h3>
             <p style='font-weight: bold; color: #fbbf24;'>Ketua Proyek & Pengembang Backend</p>
             <p style='font-size: 0.9rem;'>Integrasi API, algoritma turunan, arsitektur sistem</p>
         </div>
@@ -130,7 +130,7 @@ elif halaman == "👥 Anggota Tim":
                         justify-content: center; font-size: 3rem; color: #f5576c;'>
                 👩‍💻
             </div>
-            <h3>Siti Rahma</h3>
+            <h3>Luthfi Ilham Pratama</h3>
             <p style='font-weight: bold; color: #fbbf24;'>Pengembang Frontend</p>
             <p style='font-size: 0.9rem;'>Desain UI/UX, komponen Streamlit, visualisasi</p>
         </div>
@@ -146,7 +146,23 @@ elif halaman == "👥 Anggota Tim":
                         justify-content: center; font-size: 3rem; color: #00f2fe;'>
                 👩‍🔬
             </div>
-            <h3>Andi Wijaya</h3>
+            <h3>Andrian Ramadhan</h3>
+            <p style='font-weight: bold; color: #fbbf24;'>Spesialis Matematika</p>
+            <p style='font-size: 0.9rem;'>Algoritma optimasi, validasi matematis, pengujian</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+           # Anggota tim 4
+    with col3:
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); 
+                    padding: 3rem; border-radius: 15px; text-align: center; color: white;'>
+            <div style='width: 120px; height: 120px; background: white; border-radius: 50%; 
+                        margin: 0 auto 1rem; display: flex; align-items: center; 
+                        justify-content: center; font-size: 3rem; color: #00f2fe;'>
+                👩‍🔬
+            </div>
+            <h3>Riska Dwi</h3>
             <p style='font-weight: bold; color: #fbbf24;'>Spesialis Matematika</p>
             <p style='font-size: 0.9rem;'>Algoritma optimasi, validasi matematis, pengujian</p>
         </div>
