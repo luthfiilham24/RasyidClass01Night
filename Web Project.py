@@ -14,118 +14,95 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# =================== GEN-Z MODERN NEON THEME CSS ===================
-
+# =================== GEN-Z PASTEL GLASS AESTHETIC THEME ===================
 st.markdown("""
 <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
 
 html, body, [class*="css"] {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Main App Background */
+/* Gradient Background */
 .stApp {
-    background: radial-gradient(circle at 20% 30%, #7f5af0, #2cb67d 40%, #16161a 90%);
-    background-attachment: fixed;
-    color: #fffffe;
+    background: linear-gradient(145deg, #c3d9ff, #e8d5ff, #d1fff1);
+    background-size: 300% 300%;
+    animation: bgshift 12s ease infinite;
+}
+@keyframes bgshift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
 }
 
-/* Title Styling */
+/* Title Style */
 h1 {
-    font-weight: 900;
-    font-size: 3rem;
     text-align: center;
-    background: linear-gradient(90deg, #2cb67d, #7f5af0, #00c6ff);
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #6c63ff, #00b4d8, #9d4edd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 3px;
-    animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  from { text-shadow: 0 0 10px rgba(255,255,255,0.3); }
-  to { text-shadow: 0 0 25px rgba(255,255,255,0.7); }
-}
-
-h2, h3 {
-    color: #fffffe;
-    font-weight: 700;
-}
-
-/* Cards - Glassmorphism */
-div[data-testid="stHorizontalBlock"] > div {
-    background: rgba(255,255,255,0.08);
-    padding: 25px;
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.15);
-    box-shadow: 0 10px 35px rgba(0,0,0,0.35);
-    backdrop-filter: blur(15px);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-div[data-testid="stHorizontalBlock"] > div:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 45px rgba(0,0,0,0.5);
 }
 
 /* Sidebar */
 section[data-testid="stSidebar"] {
-    background: rgba(22, 22, 26, 0.45);
-    backdrop-filter: blur(20px);
-    border-right: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.45);
+    backdrop-filter: blur(15px);
+    border-right: 2px solid rgba(255,255,255,0.25);
 }
 
-/* Navigation Radio Buttons */
-.stRadio > div {
-    background: rgba(255,255,255,0.1);
-    padding: 15px;
-    border-radius: 15px;
-}
-
-/* Buttons - RGB neon hover */
-.stButton > button {
-    background: linear-gradient(135deg, #7f5af0, #2cb67d);
-    color: white;
-    border-radius: 15px;
-    border: none;
-    font-weight: 700;
-    padding: 0.7rem 2rem;
+/* Card / Container Style */
+div[data-testid="stHorizontalBlock"] > div {
+    background: rgba(255,255,255,0.55);
+    padding: 25px;
+    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,0.35);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.18);
     transition: 0.3s ease;
-    box-shadow: 0 0 15px rgba(127, 90, 240, 0.6);
+}
+div[data-testid="stHorizontalBlock"] > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.28);
 }
 
-.stButton > button:hover {
-    transform: scale(1.08) translateY(-4px);
-    box-shadow: 0 0 25px rgba(44, 182, 125, 0.8);
-    background: linear-gradient(135deg, #00c6ff, #7f5af0);
-}
-
-/* Input Box */
-.stTextInput > div > input {
-    background: rgba(255,255,255,0.15);
+/* Input */
+.stTextInput>div>input, .stTextArea textarea {
+    background: rgba(255,255,255,0.5);
+    border-radius: 14px;
+    border: 1px solid #ffffff60;
     padding: 12px;
-    border-radius: 12px;
+}
+
+/* Button */
+.stButton>button {
+    background: linear-gradient(135deg, #6c63ff, #9d4edd, #00b4d8);
+    border: none;
     color: white;
-    border: 1px solid rgba(255,255,255,0.15);
+    padding: 0.6rem 2.3rem;
+    font-weight: 700;
+    border-radius: 14px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(108, 99, 255, 0.6);
+}
+.stButton>button:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 0px 25px rgba(157, 78, 221, 0.9);
 }
 
-/* Expander */
-.streamlit-expanderHeader {
-    color: #2cb67d;
-    font-weight: 600;
-}
-
-/* Plot graphs frame */
+/* Plot Box */
 .plotly-graph-div {
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
 </style>
 """, unsafe_allow_html=True)
+# =================== END STYLE ===================
 
 # Sidebar navigasi
 st.sidebar.title("📐 Navigasi")
