@@ -91,10 +91,10 @@ if halaman == "🏠 Beranda":
     st.markdown("---")
     st.markdown("### 🚀 Fitur-fitur")
     st.markdown("""
-    - ✅ **Visualisasi Fungsi**: Plot fungsi matematika apapun
-    - ✅ **Komputasi Turunan**: Diferensiasi langkah demi langkah dengan tampilan LaTeX
-    - ✅ **Pemecah Optimasi**: Selesaikan masalah optimasi dunia nyata
-    - ✅ **Plot Interaktif**: Visualisasi dinamis dan responsif
+    - ✅ *Visualisasi Fungsi*: Plot fungsi matematika apapun
+    - ✅ *Komputasi Turunan*: Diferensiasi langkah demi langkah dengan tampilan LaTeX
+    - ✅ *Pemecah Optimasi*: Selesaikan masalah optimasi dunia nyata
+    - ✅ *Plot Interaktif*: Visualisasi dinamis dan responsif
     """)
 
 # ================== HALAMAN 2: ANGGOTA TIM ==================
@@ -130,7 +130,7 @@ elif halaman == "👥 Anggota Tim":
                         justify-content: center; font-size: 3rem; color: #f5576c;'>
                 👩‍💻
             </div>
-            <h3>Luthfi Ilham Pratama</h3>
+            <h3>Andrian Ramadhan</h3>
             <p style='font-weight: bold; color: #fbbf24;'>Pengembang Frontend</p>
             <p style='font-size: 0.9rem;'>Desain UI/UX, komponen Streamlit, visualisasi</p>
         </div>
@@ -146,13 +146,13 @@ elif halaman == "👥 Anggota Tim":
                         justify-content: center; font-size: 3rem; color: #00f2fe;'>
                 👩‍🔬
             </div>
-            <h3>Andrian Ramadhan</h3>
+            <h3>Luthfi Ilham Pratama</h3>
             <p style='font-weight: bold; color: #fbbf24;'>Spesialis Matematika</p>
             <p style='font-size: 0.9rem;'>Algoritma optimasi, validasi matematis, pengujian</p>
         </div>
         """, unsafe_allow_html=True)
 
-           # Anggota tim 4
+    # Anggota tim 4
     with col3:
         st.markdown("""
         <div style='background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); 
@@ -180,7 +180,7 @@ elif halaman == "📈 Analisis Fungsi":
         input_fungsi = st.text_input(
             "Fungsi (gunakan x sebagai variabel):",
             value="x**2 + 3*x + 2",
-            help="Contoh: x**2, sin(x), exp(x), x**3 - 2*x"
+            help="Contoh: x*2, sin(x), exp(x), x*3 - 2*x"
         )
     
     with col2:
@@ -204,23 +204,23 @@ elif halaman == "📈 Analisis Fungsi":
             turunan = diff(ekspresi_fungsi, x)
             
             with st.expander("📖 Langkah-langkah Diferensiasi", expanded=True):
-                st.markdown("**Langkah 1:** Identifikasi fungsi yang akan diturunkan")
+                st.markdown("*Langkah 1:* Identifikasi fungsi yang akan diturunkan")
                 st.latex(f"f(x) = {latex(ekspresi_fungsi)}")
                 
-                st.markdown("**Langkah 2:** Terapkan aturan diferensiasi")
+                st.markdown("*Langkah 2:* Terapkan aturan diferensiasi")
                 
                 # Cek tipe fungsi
                 if ekspresi_fungsi.is_polynomial():
-                    st.markdown("- Menggunakan **Aturan Pangkat**: $\\frac{d}{dx}[x^n] = nx^{n-1}$")
+                    st.markdown("- Menggunakan *Aturan Pangkat*: $\\frac{d}{dx}[x^n] = nx^{n-1}$")
                 if ekspresi_fungsi.has(sp.sin) or ekspresi_fungsi.has(sp.cos):
-                    st.markdown("- Menggunakan **Aturan Trigonometri**")
+                    st.markdown("- Menggunakan *Aturan Trigonometri*")
                 if ekspresi_fungsi.has(sp.exp):
-                    st.markdown("- Menggunakan **Aturan Eksponensial**: $\\frac{d}{dx}[e^x] = e^x$")
+                    st.markdown("- Menggunakan *Aturan Eksponensial*: $\\frac{d}{dx}[e^x] = e^x$")
                 
-                st.markdown("**Langkah 3:** Sederhanakan hasilnya")
+                st.markdown("*Langkah 3:* Sederhanakan hasilnya")
                 turunan_sederhana = simplify(turunan)
                 
-                st.markdown("**Langkah 4:** Turunan akhir")
+                st.markdown("*Langkah 4:* Turunan akhir")
                 st.latex(f"f'(x) = {latex(turunan_sederhana)}")
             
             # Tampilkan hasil akhir dengan menonjol
@@ -339,32 +339,32 @@ elif halaman == "🎯 Pemecah Optimasi":
             # Selesaikan berdasarkan tipe contoh
             if pilihan_contoh == "Luas Persegi Panjang (Kendala Keliling)":
                 with st.expander("📋 Solusi Langkah demi Langkah", expanded=True):
-                    st.markdown("**Langkah 1: Definisikan Variabel**")
+                    st.markdown("*Langkah 1: Definisikan Variabel*")
                     st.markdown("- Misalkan $x$ = panjang persegi panjang")
                     st.markdown("- Misalkan $y$ = lebar persegi panjang")
                     st.markdown("- Kendala keliling: $2x + 2y = 40$")
                     
-                    st.markdown("**Langkah 2: Ekspresikan Fungsi Objektif**")
+                    st.markdown("*Langkah 2: Ekspresikan Fungsi Objektif*")
                     st.markdown("- Objektif: Maksimalkan Luas $A = xy$")
                     st.markdown("- Dari kendala: $y = 20 - x$")
                     st.markdown("- Substitusi: $A(x) = x(20-x) = 20x - x^2$")
                     st.latex("A(x) = 20x - x^2")
                     
-                    st.markdown("**Langkah 3: Temukan Titik Kritis**")
+                    st.markdown("*Langkah 3: Temukan Titik Kritis*")
                     st.markdown("- Ambil turunan: $A'(x) = 20 - 2x$")
                     st.latex("A'(x) = 20 - 2x")
                     st.markdown("- Set sama dengan nol: $20 - 2x = 0$")
                     st.markdown("- Selesaikan: $x = 10$")
                     
-                    st.markdown("**Langkah 4: Verifikasi Maksimum**")
+                    st.markdown("*Langkah 4: Verifikasi Maksimum*")
                     st.markdown("- Turunan kedua: $A''(x) = -2 < 0$ (cekung ke bawah)")
                     st.markdown("- Oleh karena itu, $x = 10$ memberikan maksimum")
                     st.markdown("- Ketika $x = 10$: $y = 20 - 10 = 10$")
                     
-                    st.markdown("**Langkah 5: Hitung Luas Maksimum**")
+                    st.markdown("*Langkah 5: Hitung Luas Maksimum*")
                     st.markdown("- Luas Maksimum = $10 \\times 10 = 100$ meter persegi")
                 
-                st.success("✅ **Solusi:** Persegi panjang harus berbentuk persegi dengan sisi 10 meter masing-masing, memberikan luas maksimum 100 meter persegi.")
+                st.success("✅ *Solusi:* Persegi panjang harus berbentuk persegi dengan sisi 10 meter masing-masing, memberikan luas maksimum 100 meter persegi.")
                 
                 # Plot
                 st.markdown("### 📊 Visualisasi")
@@ -395,25 +395,25 @@ elif halaman == "🎯 Pemecah Optimasi":
             
             elif pilihan_contoh == "Optimasi Produk":
                 with st.expander("📋 Solusi Langkah demi Langkah", expanded=True):
-                    st.markdown("**Langkah 1: Definisikan Variabel**")
+                    st.markdown("*Langkah 1: Definisikan Variabel*")
                     st.markdown("- Misalkan $x$ = bilangan pertama")
                     st.markdown("- Misalkan $y$ = bilangan kedua")
                     st.markdown("- Kendala: $x + y = 50$")
                     
-                    st.markdown("**Langkah 2: Ekspresikan Fungsi Objektif**")
+                    st.markdown("*Langkah 2: Ekspresikan Fungsi Objektif*")
                     st.markdown("- Objektif: Maksimalkan Produk $P = xy$")
                     st.markdown("- Dari kendala: $y = 50 - x$")
                     st.markdown("- Substitusi: $P(x) = x(50-x) = 50x - x^2$")
                     
-                    st.markdown("**Langkah 3: Temukan Titik Kritis**")
+                    st.markdown("*Langkah 3: Temukan Titik Kritis*")
                     st.markdown("- Turunan: $P'(x) = 50 - 2x$")
                     st.markdown("- Set ke nol: $x = 25$")
                     
-                    st.markdown("**Langkah 4: Verifikasi dan Hitung**")
+                    st.markdown("*Langkah 4: Verifikasi dan Hitung*")
                     st.markdown("- Ketika $x = 25$: $y = 25$")
                     st.markdown("- Produk Maksimum = $25 \\times 25 = 625$")
                 
-                st.success("✅ **Solusi:** Kedua bilangan adalah 25 dan 25, dengan produk maksimum 625.")
+                st.success("✅ *Solusi:* Kedua bilangan adalah 25 dan 25, dengan produk maksimum 625.")
                 
                 # Plot
                 nilai_x = np.linspace(0, 50, 200)
@@ -442,37 +442,37 @@ elif halaman == "🎯 Pemecah Optimasi":
             
             elif pilihan_contoh == "Volume Kotak (Luas Permukaan)":
                 with st.expander("📋 Solusi Langkah demi Langkah", expanded=True):
-                    st.markdown("**Langkah 1: Definisikan Variabel**")
+                    st.markdown("*Langkah 1: Definisikan Variabel*")
                     st.markdown("- Misalkan $x$ = panjang sisi persegi yang dipotong (inci)")
                     st.markdown("- Ukuran karton asli: 12 × 12 inci")
                     st.markdown("- Setelah dipotong: panjang alas = $(12-2x)$, lebar = $(12-2x)$, tinggi = $x$")
                     
-                    st.markdown("**Langkah 2: Ekspresikan Fungsi Volume**")
+                    st.markdown("*Langkah 2: Ekspresikan Fungsi Volume*")
                     st.markdown("- Volume: $V = (12-2x)(12-2x)(x)$")
                     st.markdown("- $V(x) = x(12-2x)^2 = x(144 - 48x + 4x^2)$")
                     st.markdown("- $V(x) = 4x^3 - 48x^2 + 144x$")
                     st.latex("V(x) = 4x^3 - 48x^2 + 144x")
                     
-                    st.markdown("**Langkah 3: Temukan Titik Kritis**")
+                    st.markdown("*Langkah 3: Temukan Titik Kritis*")
                     st.markdown("- Turunan: $V'(x) = 12x^2 - 96x + 144$")
                     st.markdown("- Set ke nol: $12x^2 - 96x + 144 = 0$")
                     st.markdown("- Sederhanakan: $x^2 - 8x + 12 = 0$")
                     st.markdown("- Faktorkan: $(x-2)(x-6) = 0$")
                     st.markdown("- Solusi: $x = 2$ atau $x = 6$")
                     
-                    st.markdown("**Langkah 4: Tentukan Maksimum**")
+                    st.markdown("*Langkah 4: Tentukan Maksimum*")
                     st.markdown("- Untuk $x = 6$: dimensi alas = $12-2(6) = 0$ (tidak valid)")
                     st.markdown("- Untuk $x = 2$: dimensi alas = $12-2(2) = 8$ inci")
                     st.markdown("- Turunan kedua: $V''(2) = 24(2) - 96 = -48 < 0$ (maksimum)")
                     
-                    st.markdown("**Langkah 5: Hitung Volume Maksimum**")
+                    st.markdown("*Langkah 5: Hitung Volume Maksimum*")
                     st.markdown("- Volume maksimum = $2 \\times 8 \\times 8 = 128$ inci kubik")
                 
-                st.success("✅ **Solusi:** Potong persegi 2 inci × 2 inci dari setiap sudut untuk mendapatkan volume maksimum 128 inci kubik.")
+                st.success("✅ *Solusi:* Potong persegi 2 inci × 2 inci dari setiap sudut untuk mendapatkan volume maksimum 128 inci kubik.")
                 
                 # Plot
                 nilai_x = np.linspace(0.1, 6, 200)
-                nilai_volume = 4*nilai_x**3 - 48*nilai_x**2 + 144*nilai_x
+                nilai_volume = 4*nilai_x*3 - 48*nilai_x*2 + 144*nilai_x
                 
                 fig = go.Figure()
                 fig.add_trace(go.Scatter(
@@ -498,7 +498,7 @@ elif halaman == "🎯 Pemecah Optimasi":
             else:
                 st.info("💡 Untuk masalah kustom, silakan pilih salah satu contoh yang telah ditentukan untuk melihat format solusi.")
         else:
-            st.warning("⚠️ Silakan masukkan masalah untuk diselesaikan.")
+            st.warning("⚠ Silakan masukkan masalah untuk diselesaikan.")
 
 # Footer
 st.sidebar.markdown("---")
@@ -511,7 +511,7 @@ Aplikasi ini mendemonstrasikan:
 - Alat matematika interaktif
 """)
 
-st.sidebar.markdown("### 🛠️ Teknologi")
+st.sidebar.markdown("### 🛠 Teknologi")
 st.sidebar.markdown("""
 - Python
 - Streamlit
