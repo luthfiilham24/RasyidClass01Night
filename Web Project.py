@@ -432,4 +432,3 @@ elif halaman == "🎯 Pemecah Optimasi":
                 st.info("💡 Untuk masalah kustom, silakan pilih salah satu contoh yang telah ditentukan untuk melihat format solusi.")
         else:
             st.warning("⚠️ Silakan masukkan masalah untuk diselesaikan.")
-
